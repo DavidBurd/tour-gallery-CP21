@@ -43,7 +43,11 @@ const App = () => {
   return (
     <main>
       <h1>Our Tours</h1>
-      <Gallery tours={tours} onRemove={removeTour} />
+      {tours.length > 0 ? (
+        <Gallery tours={tours} onRemove={removeTour} />
+      ) : (
+        <h2>No tours left</h2>
+      )}
     </main>
   );
 };
