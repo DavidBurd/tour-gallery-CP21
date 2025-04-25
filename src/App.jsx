@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './styles/styles.css';
 import Gallery from './components/Gallery';
 
 const App = () => {
