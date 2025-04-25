@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import TourCard from './components/TourCards';
+import Gallery from './components/Gallery';
 
 const App = () => {
   const [tours, setTours] = useState([]);
@@ -43,19 +43,7 @@ const App = () => {
   return (
     <main>
       <h1>Our Tours</h1>
-      <div className="tour-list">
-        {tours.map((tour) => (
-          <TourCard
-            key={tour.id}
-            id={tour.id}
-            name={tour.name}
-            info={tour.info}
-            image={tour.image}
-            price={tour.price}
-            onRemove={removeTour}
-          />
-        ))}
-      </div>
+      <Gallery tours={tours} onRemove={removeTour} />
     </main>
   );
 };
